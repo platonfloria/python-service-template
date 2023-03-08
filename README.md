@@ -3,34 +3,23 @@
 ## Build image
 
 ```bash
-./build.sh
+make build
 ```
 
 ## Test image
 
 ```bash
-./test.sh
+make test
 ```
 
 ## Run command inside the container
 
 ```bash
-./terminal.sh
+make terminal
 ```
 
 ## Run stack
 
 ```bash
-./run.sh
-```
-
-## Configuration
-
-Create custom.cfg file. It can be used to store and inject secrets, that should not be commited into the repo.
-Additional local only docker options can be specified in `custom_options` variable, such as volume mounts, i.e.
-
-```
-custom_options="""
-  --volume=`pwd`/../some-package-repo/some_package:/usr/local/lib/python3.7/site-packages/some_package
-"""
+make run
 ```
