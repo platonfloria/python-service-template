@@ -1,36 +1,63 @@
 # {{ service-name }}
 
-## Build image
+## 🔍 Overview
+```
+What is the purpose or functionality of this repo or application
+```
+
+## ⚠️ Requirements
+```
+What are the dependencies or expectations required in order to run this. This should include minimum versions of Docker. Include the operating system-level dependencies and versions.
+```
+
+### 🌲 Environment vars
+```
+Optional: Any necessary environment variables to set and how to set them (e.g. file vs CLI)
+```
+
+### 🔑 API keys
+```
+Optional: Necessary authentication credentials and where to set them
+```
+
+
+## ⚙️ Configuration
+```
+Optional: What type of configuration is required and provide instructions in how to achieve that. For example if the user needs an API key or to set environment variables
+```
+
+## 🏁 Getting started
+
+### Build image
 
 ```bash
-./build.sh
+make build
 ```
 
-## Test image
+### Test image
 
 ```bash
-./test.sh
+make test
 ```
 
-## Run command inside the container
+### Run command inside the container
 
 ```bash
-./terminal.sh
+make terminal
 ```
 
-## Run stack
+### Run stack
 
 ```bash
-./run.sh
+make run
 ```
 
-## Configuration
-
-Create custom.cfg file. It can be used to store and inject secrets, that should not be commited into the repo.
-Additional local only docker options can be specified in `custom_options` variable, such as volume mounts, i.e.
-
+## 🚀 Deployment
 ```
-custom_options="""
-  --volume=`pwd`/../some-package-repo/some_package:/usr/local/lib/python3.7/site-packages/some_package
-"""
+Optional: Instructions on how to deploy the application or service to Staging environments and Production if relevant
+```
+
+## 🤔 Troubleshooting
+```
+Optional: Your application may have nuances or gotchas, please outline them here for convenience
 ```
